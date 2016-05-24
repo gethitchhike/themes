@@ -1,0 +1,127 @@
+@import "../../node_modules/sanitize.css/sanitize.css";
+@import url(https://fonts.googleapis.com/css?family=Hind:400,700); //colors
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300italic);
+$accentColor: #849AA2;
+$textColorLight: #ddd;
+$textColorDark: #222;
+$linkColor: $textColorDark;
+$linkColorHover: black;
+$linkColorActive: $textColorLight;
+$baseFont: "Hind", sans-serif;
+$italicFont: "Fira Sans", sans-serif; // text defaults
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+h1 {
+    margin-top: 0;
+    font-size: 3.998em;
+}
+h2 {
+    font-size: 2.827em;
+}
+h3 {
+    font-size: 1.999em;
+}
+h4 {
+    font-size: 1.414em;
+}
+.font_small,
+small {
+    font-size: 0.707em;
+}
+a {
+    color: $linkColor;
+    &:hover {
+        color: $linkColorHover;
+    }
+    &:active {
+        color: $linkColorActive;
+    }
+}
+body {
+    background: $accentColor;
+    min-height: 100vh;
+    font-family: $baseFont;
+    font-size: 17px;
+}
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.flex__item--40 {
+    flex: 1 0 40%;
+}
+.flex__item--60 {
+    flex: 1 0 60%;
+}
+.blog-title {}
+.blog-title__avatar {
+    display: none;
+}
+.blog-title__text {
+    margin-bottom: 0.3em;
+    margin-top: .9em;
+    letter-spacing: 1;
+    line-height: .8;
+}
+.blog-title__subtitle {
+    margin-top: 0;
+    font-weight: lighter;
+}
+.sidebar {
+    padding: 2.25rem 3rem;
+    background: darken($accentColor, 20);
+}
+.articles {
+    padding: 2.25em 3rem;
+}
+.article {}
+.article__meta {
+    font-family: $italicFont;
+    font-style: italic;
+    font-size: 1.414em;
+    letter-spacing: 0.05em;
+}
+.article__header {
+    margin-bottom: .4em;
+}
+.article__preview-text {
+    font-size: 1.414em;
+    margin-bottom: .4em;
+}
+.article__read-button {
+    font-size: 1.414em;
+}
+.button {
+    letter-spacing: 0.075em;
+    font-family: $italicFont;
+    font-style: italic;
+}
+.button--dark {
+    border-bottom: 0.05em solid $textColorDark;
+    padding-bottom: .1em;
+    &:hover {
+      border-bottom-color: $linkColorHover;
+    }
+    &:active {
+      border-bottom-color: $linkColorActive;
+    }
+}
+
+.info-list {
+  list-style-type: none;
+}
+
+.info-list__item {
+  display: inline;
+}
