@@ -1,0 +1,1 @@
+Every theme is in a separate folder.
