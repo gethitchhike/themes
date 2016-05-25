@@ -82,6 +82,7 @@ body {
 .sidebar {
     padding: 2.25rem 3rem;
     background: darken($accentColor, 20);
+    flex-basis: 500px;
 }
 .articles {
     padding: 2.25em 3rem;
