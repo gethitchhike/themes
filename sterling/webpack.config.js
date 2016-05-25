@@ -5,7 +5,8 @@ const path = require('path')
 const sassLoaders = [
     'css-loader',
     'postcss-loader',
-    'sass-loader?includePaths[]=' + path.resolve(__dirname, './src')
+    'resolve-url',
+    'sass-loader?sourceMap&includePaths[]=' + path.resolve(__dirname, './src')
 ]
 
 const config = {
@@ -13,17 +14,17 @@ const config = {
         app: ['./src/index']
     },
     module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loaders: ['babel-loader']
-            },
-            {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
-            }
-        ]
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loaders: ['babel-loader']
+        }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+        }, {
+            test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            loader: 'url-loader?limit=100000'
+        }]
     },
     output: {
         filename: '[name].js',

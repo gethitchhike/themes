@@ -1,0 +1,21 @@
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(sprite.svg);
+}
+.icon-clock {
+    width: 17px;
+    height: 17px;
+    background-position: 0 0;
+}
+.icon-reply {
+    width: 17px;
+    height: 17px;
+    background-position: -17px 0;
+}
+.icon-head {
+    width: 17px;
+    height: 17px;
+    background-position: -34px 0;
+}
+

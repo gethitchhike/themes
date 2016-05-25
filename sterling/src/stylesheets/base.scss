@@ -1,5 +1,6 @@
-@import "../../node_modules/sanitize.css/sanitize.css"; //@import "../../node_modules/puse-icons-feather/feather.css";
+@import "~sanitize.css/sanitize.css";
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300italic,400italic);
+@import "./feather/sprite";
 $accentColor: #849AA2;
 $textColorLight: #ddd;
 $textColorDark: #222;
@@ -71,7 +72,7 @@ body {
 .blog-title__text {
     margin-bottom: 0.3em;
     margin-top: 0.9em;
-    letter-spacing: 1;
+    letter-spacing: .05em;
     line-height: 0.8;
 }
 .blog-title__subtitle {
@@ -88,11 +89,14 @@ body {
 .article {
     margin-top: 4em;
 }
-.article__meta {
+.article-meta {
     font-family: $italicFont;
     font-style: italic;
     font-weight: 300;
     font-size: 1.414em;
+}
+.article-meta__time {
+    margin-right: 0.3em;
 }
 .article-header {
     margin-bottom: 0.4em;
@@ -102,7 +106,7 @@ body {
 }
 .article__preview-text {
     font-size: 1.414em;
-    margin-bottom: 0.4em;
+    margin-bottom: 1em;
     font-style: italic;
 }
 .article__read-button {

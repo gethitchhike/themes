@@ -40,10 +40,9 @@
 					<?php elseif (property_exists($blog,"Image")) :?>
 					<img class="blog-title__avatar" src="<?php echo $blog->Image;?>">
 					<?php endif;?>
-					<h1 class="blog-title__text">
 							 <a href="<?php echo __USEDOTFORINDEX__ === "true"? ".":"index.php";?>">
-			<?php echo $blog->Name;?></a>
-					</h1>
+								 <h1 class="blog-title__text"><?php echo $blog->Name;?></h1>
+								 </a>
 					<h3 class="blog-title__subtitle"><?php echo $blog->Subtitle;?></h5>
 		</section>
 			<ul class="info-list">
@@ -69,7 +68,7 @@
 		<?php require_once $innerContent; ?>
 	</main>
 </div>
-<script src="./themes/simple/instantclick.min.js" data-no-instant></script>
+<script src="./themes/sterling/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
 </body>
 </html>

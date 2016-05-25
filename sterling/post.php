@@ -7,11 +7,14 @@
 			<a href="">
 		<?php endif;?>
 		<?php echo $post->Title;?></a></h2>
-		<section class="article__meta">
+		<section class="article-meta">
 			<?php if (!is_Null($post->Author)) :?>
-			<time datetime="<?php echo date(" Y-m-d ",$post->Date);?>"><?php echo date("d.m.Y, H:i",$post->Date);?></time>,
-			<a href="#"><span class="name" rel="Author"><?php echo $post->Author->Name;?></span>
- 				</a>
+			<span class="icon icon-clock"></span>
+			<time class="article-meta__time" datetime="<?php echo date(" Y-m-d ",$post->Date);?>">
+				<?php echo date("d.m.Y, H:i",$post->Date);?></time>
+				<a href="#"> <span class="icon icon-head"></span>
+				<?php echo $post->Author->Name;?>
+			</a>
 			<?php endif;?>
 		</section>
 		<?php if (!empty($post->Image)) :?>

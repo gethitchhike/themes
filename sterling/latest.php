@@ -3,9 +3,13 @@
 <article class="article">
 	<header class="article-header">
 		<h2 class="article-header__text"><a href="?/post/<?php echo $post->WebFilename;?>/"><?php echo $post->Title;?></a></h2>
-		<section class="article__meta">
+		<section class="article-meta">
 			<?php if (!is_Null($post->Author)) :?>
-			<span class="icon-clock"></span><time datetime="<?php echo date("Y-m-d",$post->Date);?>"><?php echo date("d.m.Y, H:i",$post->Date);?></time>, <a href="#"><span><?php echo $post->Author->Name;?></span>
+			<span class="icon icon-clock"></span>
+			<time class="article-meta__time" datetime="<?php echo date(" Y-m-d ",$post->Date);?>">
+				<?php echo date("d.m.Y, H:i",$post->Date);?></time>
+				<a href="#"> <span class="icon icon-head"></span>
+				<?php echo $post->Author->Name;?>
 			</a>
 			<?php endif;?>
 		</section>
@@ -21,7 +25,6 @@
 	</a>
 </article>
 <?php endforeach;?>
-
 
 <!-- Pagination -->
 <?php

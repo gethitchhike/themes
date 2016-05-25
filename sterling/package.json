@@ -17,10 +17,11 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
-    "puse-icons-feather": "^1.1.0",
+    "resolve-url-loader": "^1.4.3",
     "sanitize.css": "^3.3.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
   }
 }
