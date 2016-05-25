@@ -2,7 +2,7 @@
   "name": "sterling",
   "version": "1.0.0",
   "description": "",
-  "main": "instantclick.min.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
+    "puse-icons-feather": "^1.1.0",
     "sanitize.css": "^3.3.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",

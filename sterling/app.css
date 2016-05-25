@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Hind:400,700);@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300italic);/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300italic,400italic);/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 
 /* Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1 */
 
@@ -385,7 +385,8 @@ a {
 body {
   background: #849AA2;
   min-height: 100vh;
-  font-family: "Hind", sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
   font-size: 17px; }
 
 .wrapper {
@@ -400,8 +401,8 @@ body {
       flex-direction: row; }
 
 .flex__item--40 {
-  -ms-flex: 1 0 40%;
-      flex: 1 0 40%; }
+  -ms-flex: 0 1 40%;
+      flex: 0 1 40%; }
 
 .flex__item--60 {
   -ms-flex: 1 0 60%;
@@ -412,9 +413,9 @@ body {
 
 .blog-title__text {
   margin-bottom: 0.3em;
-  margin-top: .9em;
+  margin-top: 0.9em;
   letter-spacing: 1;
-  line-height: .8; }
+  line-height: 0.8; }
 
 .blog-title__subtitle {
   margin-top: 0;
@@ -427,18 +428,25 @@ body {
 .articles {
   padding: 2.25em 3rem; }
 
+.article {
+  margin-top: 4em; }
+
 .article__meta {
   font-family: "Fira Sans", sans-serif;
   font-style: italic;
-  font-size: 1.414em;
-  letter-spacing: 0.05em; }
+  font-weight: 300;
+  font-size: 1.414em; }
 
-.article__header {
-  margin-bottom: .4em; }
+.article-header {
+  margin-bottom: 0.4em; }
+
+.article-header__text {
+  margin-top: 0; }
 
 .article__preview-text {
   font-size: 1.414em;
-  margin-bottom: .4em; }
+  margin-bottom: 0.4em;
+  font-style: italic; }
 
 .article__read-button {
   font-size: 1.414em; }
@@ -450,7 +458,7 @@ body {
 
 .button--dark {
   border-bottom: 0.05em solid #222;
-  padding-bottom: .1em; }
+  padding-bottom: 0.1em; }
   .button--dark:hover {
     border-bottom-color: black; }
   .button--dark:active {
@@ -461,3 +469,19 @@ body {
 
 .info-list__item {
   display: inline; }
+
+@media only screen and (max-width: 768px) {
+  .flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .flex__item--40,
+  .flex__item--60 {
+    min-width: 100%; }
+  .blog-title__text {
+    margin-top: 0.4em; }
+  .article:first-child {
+    margin-top: 0; }
+  .article {
+    margin-top: 4em; }
+  .article-header__text {
+    margin-top: 0; } }

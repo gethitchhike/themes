@@ -1,6 +1,6 @@
 <article class="article" data-image="<?php echo $post->Image;?>">
-	<header class="article__header">
-		<h2>
+	<header class="article-header">
+		<h2 class="article-header__text">
 		<?php if (!empty($post->WebFilename)):?>
 			<a href="?/post/<?php echo $post->WebFilename;?>/">
 		<?php else :?>
