@@ -1,4 +1,4 @@
-# sterling
+# clean
 ## A theme for the blog engine hitchhike.
 
 Still work in progress!
