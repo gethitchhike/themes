@@ -3,26 +3,35 @@
 <article class="article">
 	<header class="article-header">
 		<h2 class="article-header__text"><a href="?/post/<?php echo $post->WebFilename;?>/"><?php echo $post->Title;?></a></h2>
-		<section class="article-meta">
+		<?php if (!empty($post->Image)) :?>
+			<section class="article-meta">
+			<?php else: ?>
+			<section class="article-meta article-meta--no-image">
+		<?php endif; ?>	
 			<?php if (!is_Null($post->Author)) :?>
 			<span class="icon icon-clock"></span>
 			<time class="article-meta__time" datetime="<?php echo date(" Y-m-d ",$post->Date);?>">
 				<?php echo date("d.m.Y, H:i",$post->Date);?></time>
-				<a href="#"> <span class="icon icon-head"></span>
+			<a href="#"> <span class="icon icon-head"></span>
 				<?php echo $post->Author->Name;?>
 			</a>
 			<?php endif;?>
 		</section>
 		<?php if (!empty($post->Image)) :?>
-		<img src="<?php echo $post->Image;?>">
+		<div class="article-image__wrapper">
+			<a href="?/post/<?php echo $post->WebFilename;?>/">
+				<img class="article-image__image" src="<?php echo $post->Image;?>" />
+			</a>
+			<p class="article-image__preview-text">
+				<?php echo \BTRString::SubStrClause(strip_tags($Parsedown->text($post->Content)),2,true)."...";?>
+			</p>
+		</div>
+		<?php else: ?>
+		<p class="article__preview-text">
+			<?php echo \BTRString::SubStrClause(strip_tags($Parsedown->text($post->Content)),2,true)."...";?>
+		</p>
 		<?php endif;?>
 	</header>
-	<p class="article__preview-text">
-		<?php echo \BTRString::SubStrClause(strip_tags($Parsedown->text($post->Content)),2,true)."...";?>
-	</p>
-	<a class="article__read-button button button--dark" href="?/post/<?php echo $post->WebFilename;?>/" class="button">
-		<?php echo $translation["continuereading"];?>
-	</a>
 </article>
 <?php endforeach;?>
 

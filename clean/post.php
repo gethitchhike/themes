@@ -18,7 +18,7 @@
 			<?php endif;?>
 		</section>
 		<?php if (!empty($post->Image)) :?>
-		<img src="<?php echo $post->Image;?>">
+		<img class="article-header__image" src="<?php echo $post->Image;?>">
 		<?php endif;?>
 	</header>
 	<div class="article__preview-text"><?php echo $Parsedown->text($post->Content);?></div>
