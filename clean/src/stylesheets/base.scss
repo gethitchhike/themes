@@ -129,7 +129,7 @@ body {
     position: relative;
 }
 .article-image__wrapper::after {
-    background: linear-gradient(0, rgba(0,0,0,.75), transparent);
+    background: linear-gradient(0, rgba(0,0,0,.75), transparent 35%);
     content: "";
     position: absolute;
     left: 0;
