@@ -77,9 +77,9 @@ body {
 .blog-title__text {
     margin-bottom: 0.3em;
     margin-top: 0.9em;
-    letter-spacing: 0.05em;
-    line-height: 0.8; 
-    padding-bottom: .4em;
+    line-height: 1.1; 
+    padding-bottom: .25em;
+    font-size: 3em;
     color: $textColorDark;
     border-bottom: $borderWidth solid $borderColor;
 }
@@ -93,14 +93,14 @@ body {
     flex-basis: 500px;
 }
 .articles {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 5em;
+    padding-bottom: 3em;
     max-width: 800px;
     background: rgba(black, .04);
     box-shadow: -0.2em 0 20px -12px rgba(0,0,0,0.5) inset;
 }
 .article {
-    margin-top: 4em;
+    margin-bottom: 8em;
 }
 .article-meta {
     font-family: $italicFont;
@@ -124,6 +124,7 @@ body {
 }
 .article-header__text {
     margin-top: 0;
+    margin-bottom: .1em;
 }
 .article__preview-text {
     font-size: 1.414em;
@@ -209,6 +210,7 @@ body {
     }
     .article {
         margin-top: 4em;
+        font-size: .9em;
     }
     .article-header {
         padding-left: 1.5em;
