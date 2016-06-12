@@ -49,9 +49,9 @@
 				<li class="info-list__item">&copy; <?php echo $blog->Copyright;?></li>
 			<?php if (count($sites) != 0) :?>
 				<?php foreach($sites as $site):?>
-					<li><a href="?/post/<?php echo $site->WebFilename;?>/"><?php echo $site->Title;?></a></li>
+					<li class="info-list__item"><a href="?/post/<?php echo $site->WebFilename;?>/"><?php echo $site->Title;?></a></li>
 				<?php endforeach;?>
-				<li><a href="?/feed/" data-no-instant>Feed</a></li>
+				<li class="info-list__item"><a href="?/feed/" data-no-instant>Feed</a></li>
 			<?php endif;?>
 			</ul>
 			<?php

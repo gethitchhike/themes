@@ -187,9 +187,17 @@ body {
 }
 .info-list {
     list-style-type: none;
+    font-size: 1.1em;
 }
 .info-list__item {
     display: inline;
+}
+.info-list__item::after {
+    content: " |";
+    color: rgba(black, 0.2);
+}
+.info-list__item:last-child::after {
+    content: "";
 }
 @media only screen and (max-width: 768px) {
     .flex {
@@ -229,5 +237,8 @@ body {
     .sidebar {
         padding-left: 1.5em;
         padding-right: 1.5em;
+    }
+    .blog-title__subtitle {
+        display: none;
     }
 }
