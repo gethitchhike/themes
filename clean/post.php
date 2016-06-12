@@ -18,10 +18,12 @@
 			<?php endif;?>
 		</section>
 		<?php if (!empty($post->Image)) :?>
-		<img class="article-image__image" src="<?php echo $post->Image;?>">
+		<div class="article-image__wrapper">
+			<img class="article-image__image" src="<?php echo $post->Image;?>">
+		</div>
 		<?php endif;?>
+		<div class="article__text"><?php echo $Parsedown->text($post->Content);?></div>
 	</header>
-	<div class="article__preview-text"><?php echo $Parsedown->text($post->Content);?></div>
 	<?php if (!property_exists($post,"HTTPCode") || $post->HTTPCode !== 404) :?>
 	<?php
 		global $bootstrap;
